@@ -23,6 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (form) {
     if (typeof emailjs === "undefined") {
+      const status = document.createElement("p");
+      status.setAttribute("role", "alert");
+      status.style.color = "red";
+      status.textContent = "Error: no se ha podido conectar con el servicio de envío de correos. Recarga la página o inténtalo más tarde.";
+      form.appendChild(status);
       console.error("EmailJS no se ha cargado correctamente.");
       return;
     }
