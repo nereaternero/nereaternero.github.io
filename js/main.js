@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
       try {
         await emailjs.send(
           "service_e1qfv6i",
-          "template_k4skr6r",
+          "template_b7607vm",
           {
             nombre: data.get("nombre"),
             email: data.get("email"),
